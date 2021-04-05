@@ -1,0 +1,6 @@
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Router\Router.php:23	The method dispatch() has a Cyclomatic Complexity of 28. The configured cyclomatic complexity threshold is 10.
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Router\Router.php:23	The method dispatch() has 100 lines of code. Current threshold is set to 100. Avoid really long methods.
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Router\Router.php:66	The method dispatch uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Router\Router.php:72	The method dispatch uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Router\Router.php:90	The method dispatch uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Router\Router.php:98	The method dispatch uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
