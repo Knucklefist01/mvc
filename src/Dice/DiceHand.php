@@ -9,20 +9,21 @@ namespace Webbprogrammering\Dice;
  */
 class DiceHand
 {
-    const AMOUNT = 2;
+    private $amount;
 
-    public array $dices;
+    public $dices = [];
 
-    public function __construct()
+    public function __construct($number = 2)
     {
-        for ($i = 0; $i <= self::AMOUNT - 1; $i++) {
+        $this->amount = $number;
+        for ($i = 0; $i <= $this->amount - 1; $i++) {
             $this->dices[$i] = new Dice();
         }
     }
 
     public function roll(): void
     {
-        for ($i = 0; $i <= self::AMOUNT - 1; $i++) {
+        for ($i = 0; $i <= $this->amount - 1; $i++) {
             $this->dices[$i]->roll();
         }
     }
@@ -31,7 +32,7 @@ class DiceHand
     {
         $res = [];
 
-        for ($i = 0; $i <= self::AMOUNT - 1; $i++) {
+        for ($i = 0; $i <= $this->amount - 1; $i++) {
             $res .= $this->dices[$i]->getLastRoll();
         }
 

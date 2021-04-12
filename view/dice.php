@@ -15,6 +15,12 @@ $header = $header ?? null;
 diceProcessor
 -->
 
+<?php if (isset($debug)) { ?>
+<div>
+    <?= var_dump($debug) ?>
+</div>
+<?php } ?>
+
 <form action="diceProcessor" method="post">
     <p>Antal tärningar: </p>
     <div>
@@ -94,7 +100,7 @@ diceProcessor
             <div class="previousColumn"><?= $value["player"] ?></div>
             <div class="previousColumn"><?= $value["computer"] ?></div>
             <div class="previousColumn"><?php if ($value["playerWinner"]) {
-                                            echo "Du Vann";
+                                            echo "Spelaren Vann";
                                         } else {
                                             echo "Datorn Vann";
                                         } ?></div>

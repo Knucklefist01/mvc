@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     overflow-y: scroll;
     width: 800px;
@@ -19,6 +23,8 @@ footer {
 main img {
     width: 100px;
 }
+
+/* --- Game 21 ------------------------------------------------------- */
 
 form input[type=submit] {
     margin-bottom: 0.5vh;
@@ -103,5 +109,101 @@ h1.playerWon {
 .previousColumn {
     width: 30%;
     height: 2vh;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------- */
+/* --- Yatzy --------------------------------------------------------- */
+
+.yatzyGame {
+    width: 100%;
+    height: 60vh;
+    border: 1px solid black
+}
+
+.yatzyGame .gameArea {
+    width: 80%;
+    height: 100%;
+    float: left;
+
+}
+
+.gameArea .area,
+.gameArea .buttons,
+.gameArea .hand {
+    width: 100%;
+    border: 1px solid black
+}
+
+.gameArea .area {
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.gameArea .buttons {
+    height: 40%;
+    position: relative;
+}
+
+.buttons form {
+    display: flex;
+    justify-content: space-around;
+}
+.buttons h2 {
+    text-align: center;
+}
+
+.buttons #throwSubmit {
+    width: 10vh;
+    height: 5vh;
+    position: absolute;
+    bottom: 1vh;
+}
+
+.yatzyGame .scoreTable {
+    width: 20%;
+    height: 100%;
+    float: right;
+}
+
+.scoreTable table{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.scoreTable table tr {
+    width: 100%;
+}
+
+.scoreTable table tr td {
+    border: 1px solid black;
+}
+
+.availableOption input[type=submit] {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    text-decoration: underline;
+    color: red;
+    background-color: transparent;
+}
+.availableOption input[type=submit]:hover {
+    background-color: black;
+}
+
+.scoreTable table tr td:nth-child(1) {
+    width: 70%;
+    padding-left: 7%;
+    font-weight: 900;
+}
+
+.scoreTable table tr td:nth-child(2) {
+    width: 30%;
     text-align: center;
 }
