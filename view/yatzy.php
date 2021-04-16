@@ -44,7 +44,7 @@ diceProcessor
                 <?php } ?>
             <?php } ?>
 
-            <?php if ($throws < 3 || true) { ?>
+            <?php if ($throws < 3) { ?>
                 <input type="submit" value="Kasta" name="throwSubmit" id="throwSubmit">
             <?php } ?>
                 

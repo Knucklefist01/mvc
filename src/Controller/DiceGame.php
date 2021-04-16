@@ -21,7 +21,14 @@ class DiceGame
 
         if (!isset($_SESSION["diceGame"])) {
             $data = [
-                "header" => "Dice", "playerHistory" => [], "compHistory" => [], "playerSum" => 0, "compSum" => 0, "roundHistory" => [], "endMessage" => ""
+                "header" => "Dice",
+                "playerHistory" => [],
+                "compHistory" => [],
+                "playerSum" => 0,
+                "compSum" => 0,
+                "playerWon" => false,
+                "roundHistory" => [],
+                "endMessage" => ""
             ];
         } else {
             $data = $_SESSION["diceGame"]->getData();

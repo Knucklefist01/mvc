@@ -9,9 +9,7 @@ use Webbprogrammering\Dice\DiceHand;
 use Webbprogrammering\Dice\GraphicalDice;
 
 use function Mos\Functions\{
-    redirectTo,
     renderView,
-    sendResponse,
     url
 };
 
@@ -47,6 +45,14 @@ class Game
         return $this->data;
     }
 
+    public function setData($key, $value)
+    {
+        if (array_key_exists($key, $this->data)) {
+            $this->data[$key] = $value;
+        }
+    }
+
+
     public function hasPlayerWon(): bool
     {
         if ($this->data["playerSum"] > 21) {
@@ -73,7 +79,7 @@ class Game
             $this->data["playerWon"] = $this->hasPlayerWon();
         }
 
-        redirectTo(url("/dice"));
+        // redirectTo(url("/dice"));
         return;
     }
 
@@ -156,7 +162,7 @@ class Game
         $this->data["playerWon"] = false;
 
         // echo "<pre>".var_dump($this->data)."</pre>";
-        redirectTo(url("/dice"));
+        // redirectTo(url("/dice"));
         return;
     }
 }

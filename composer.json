@@ -1,4 +1,7 @@
 {
+    "name": "mvc/mvc",
+    "description": "Objektorienterad PHP",
+    "license": "proprietary",
     "autoload": {
         "psr-4": {
             "Mos\\": "src/",
@@ -6,8 +9,7 @@
             "Webbprogrammering\\": "src/"
         },
         "files": [
-            "src/functions.php",
-            "src/diceFunctions.php"
+            "src/functions.php"
         ]
     },
     "require-dev": {

@@ -8,13 +8,6 @@ use Webbprogrammering\Dice\Dice;
 use Webbprogrammering\Dice\DiceHand;
 use Webbprogrammering\Dice\GraphicalDice;
 
-use function Mos\Functions\{
-    redirectTo,
-    renderView,
-    sendResponse,
-    url
-};
-
 /**
  * Class Yatzy.
  */
@@ -59,6 +52,13 @@ class Yatzy
         return $this->data;
     }
 
+    public function setData($key, $value)
+    {
+        if (array_key_exists($key, $this->data)) {
+            $this->data[$key] = $value;
+        }
+    }
+
     public function __construct()
     {
         $this->dice = new Dice();
@@ -91,7 +91,6 @@ class Yatzy
 
         if ($this->data["scoreLocked"]["Sum"] >= 63) {
             $this->data["scoreLocked"]["Bonus"] = 35;
-            $this->data["scoreTotal"] += 35;
         }
 
         $this->data["scoreTotal"] = 0;
@@ -136,22 +135,6 @@ class Yatzy
 
         $counts = array_count_values($this->data["hand"]);
 
-        /*
-        "Ones"
-        "Twos"
-        "Threes"
-        "Fours"
-        "Fives"
-        "Sixes"
-
-        "Three of a kind"
-        "Four of a kind"
-        "Full House"
-        "Small straight"
-        "Large straight"
-        "Chance"
-        "YAHTZEE"
-         */
         if (isset($counts[1])) {
             $this->data["scoreOptions"]["Ones"] = $counts[1] * 1;
         }
@@ -171,7 +154,6 @@ class Yatzy
             $this->data["scoreOptions"]["Sixes"] = $counts[6] * 6;
         }
 
-
         if (count($counts) == 3) {
             // HANDEN BESTÅR AV MINST TRE SIFFROR
             $firstKind = $counts[array_keys($counts)[0]];
@@ -183,12 +165,11 @@ class Yatzy
             }
         }
 
-
         if (count($counts) == 2) {
             // HANDEN BESTÅR AV TVÅ SIFFROR
             $firstKind = $counts[array_keys($counts)[0]];
             $secondKind = $counts[array_keys($counts)[1]];
-            if ($counts[array_keys($counts)[0]] == 3 || $counts[array_keys($counts)[1]] == 3) {
+            if ($firstKind == 3 || $secondKind == 3) {
                 $this->data["scoreOptions"]["Full House"] = 25;
             }
             if ($firstKind == 4 || $secondKind == 4) {

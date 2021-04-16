@@ -28,14 +28,13 @@ class DiceHand
         }
     }
 
-    public function getLastRoll(): string
+    public function getLastRoll()
     {
         $res = [];
 
         for ($i = 0; $i <= $this->amount - 1; $i++) {
-            $res .= $this->dices[$i]->getLastRoll();
+            array_push($res, $this->dices[$i]->getLastRoll());
         }
-
         return $res;
     }
 }

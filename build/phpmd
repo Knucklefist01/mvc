@@ -1,14 +1,8 @@
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Controller\DiceGame.php:26	The method __invoke uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Controller\DiceGame.php:32	The method __invoke uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Controller\DiceGame.php:33	The method __invoke uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Controller\DiceGame.php:39	The method __invoke uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
 C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Controller\DiceProcessor.php:31	The method __invoke uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
 C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Controller\DiceProcessor.php:39	The method __invoke uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Dice\Yatzy.php:103	The method pickPoints uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Dice\Yatzy.php:123	The method throwDice uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Dice\Yatzy.php:133	The method calcOptions() has a Cyclomatic Complexity of 19. The configured cyclomatic complexity threshold is 10.
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Dice\Yatzy.php:133	The method calcOptions() has an NPath complexity of 17920. The configured NPath complexity threshold is 200.
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Router\Old Router.php:23	The method dispatch() has a Cyclomatic Complexity of 28. The configured cyclomatic complexity threshold is 10.
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Router\Old Router.php:23	The method dispatch() has 100 lines of code. Current threshold is set to 100. Avoid really long methods.
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Router\Old Router.php:66	The method dispatch uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Router\Old Router.php:72	The method dispatch uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Router\Old Router.php:90	The method dispatch uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Router\Old Router.php:98	The method dispatch uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Dice\Yatzy.php:102	The method pickPoints uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Dice\Yatzy.php:122	The method throwDice uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Dice\Yatzy.php:132	The method calcOptions() has a Cyclomatic Complexity of 19. The configured cyclomatic complexity threshold is 10.
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\game\src\Dice\Yatzy.php:132	The method calcOptions() has an NPath complexity of 17920. The configured NPath complexity threshold is 200.
