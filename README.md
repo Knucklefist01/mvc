@@ -1,3 +1,7 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Knucklefist01/mvc/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/Knucklefist01/mvc/?branch=main)
+[![Code Coverage](https://scrutinizer-ci.com/g/Knucklefist01/mvc/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/Knucklefist01/mvc/?branch=main)
+[![Build Status](https://scrutinizer-ci.com/g/Knucklefist01/mvc/badges/build.png?b=main)](https://scrutinizer-ci.com/g/Knucklefist01/mvc/build-status/main)
+[![Build Status](https://travis-ci.org/Knucklefist01/mvc.svg?branch=main)]()
 \documentclass[oneside]{book}
 %\documentclass{article}
 \usepackage[utf8]{inputenc}
