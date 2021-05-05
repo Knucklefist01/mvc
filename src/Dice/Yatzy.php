@@ -135,6 +135,34 @@ class Yatzy
 
         $counts = array_count_values($this->data["hand"]);
 
+        if (count($counts) == 1) {
+            // HANDEN BESTÅR AV 1 SIFFRA (YATZY)
+            $this->data["scoreOptions"]["YAHTZEE"] = 50;
+        } else if (count($counts) == 2) {
+            // HANDEN BESTÅR AV TVÅ SIFFROR
+            $firstKind = $counts[array_keys($counts)[0]];
+            $secondKind = $counts[array_keys($counts)[1]];
+            if ($firstKind == 3 || $secondKind == 3) {
+                $this->data["scoreOptions"]["Full House"] = 25;
+                $this->data["scoreOptions"]["Three of a kind"] = array_sum($this->data["hand"]);
+            }
+            if ($firstKind == 4 || $secondKind == 4) {
+                $this->data["scoreOptions"]["Four of a kind"] = array_sum($this->data["hand"]);
+                $this->data["scoreOptions"]["Three of a kind"] = array_sum($this->data["hand"]);
+            }
+            
+        } else if (count($counts) == 3) {
+            // HANDEN BESTÅR AV MINST TRE SIFFROR
+            $firstKind = $counts[array_keys($counts)[0]];
+            $secondKind = $counts[array_keys($counts)[1]];
+            $thirdKind = $counts[array_keys($counts)[2]];
+
+            if ($firstKind == 3 || $secondKind == 3 || $thirdKind == 3) {
+                $this->data["scoreOptions"]["Three of a kind"] = array_sum($this->data["hand"]);
+            }
+        }
+
+
         if (isset($counts[1])) {
             $this->data["scoreOptions"]["Ones"] = $counts[1] * 1;
         }
@@ -152,37 +180,6 @@ class Yatzy
         }
         if (isset($counts[6])) {
             $this->data["scoreOptions"]["Sixes"] = $counts[6] * 6;
-        }
-
-        if (count($counts) == 3) {
-            // HANDEN BESTÅR AV MINST TRE SIFFROR
-            $firstKind = $counts[array_keys($counts)[0]];
-            $secondKind = $counts[array_keys($counts)[1]];
-            $thirdKind = $counts[array_keys($counts)[2]];
-
-            if ($firstKind == 3 || $secondKind == 3 || $thirdKind == 3) {
-                $this->data["scoreOptions"]["Three of a kind"] = array_sum($this->data["hand"]);
-            }
-        }
-
-        if (count($counts) == 2) {
-            // HANDEN BESTÅR AV TVÅ SIFFROR
-            $firstKind = $counts[array_keys($counts)[0]];
-            $secondKind = $counts[array_keys($counts)[1]];
-            if ($firstKind == 3 || $secondKind == 3) {
-                $this->data["scoreOptions"]["Full House"] = 25;
-            }
-            if ($firstKind == 4 || $secondKind == 4) {
-                $this->data["scoreOptions"]["Four of a kind"] = array_sum($this->data["hand"]);
-            }
-            if ($firstKind >= 3 || $secondKind >= 3) {
-                $this->data["scoreOptions"]["Three of a kind"] = array_sum($this->data["hand"]);
-            }
-        }
-
-        if (count($counts) == 1) {
-            // HANDEN BESTÅR AV 1 SIFFRA (YATZY)
-            $this->data["scoreOptions"]["YAHTZEE"] = 50;
         }
 
         $this->data["optionsAvailable"] = true;

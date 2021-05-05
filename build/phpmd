@@ -5,4 +5,4 @@ C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\ci\src\Controller\DiceProcessor.php
 C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\ci\src\Dice\Yatzy.php:102	The method pickPoints uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
 C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\ci\src\Dice\Yatzy.php:122	The method throwDice uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
 C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\ci\src\Dice\Yatzy.php:132	The method calcOptions() has a Cyclomatic Complexity of 19. The configured cyclomatic complexity threshold is 10.
-C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\ci\src\Dice\Yatzy.php:132	The method calcOptions() has an NPath complexity of 17920. The configured NPath complexity threshold is 200.
+C:\cygwin64\home\Hannes\dbwebb-kurser\mvc\me\ci\src\Dice\Yatzy.php:132	The method calcOptions() has an NPath complexity of 2112. The configured NPath complexity threshold is 200.
